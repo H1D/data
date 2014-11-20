@@ -892,7 +892,8 @@ Store = Ember.Object.extend({
 
     The callback function takes a materialized record, and returns true
     if the record should be included in the filter and false if it should
-    not.
+    not. Also callback function may return promise that should resolve either
+    to true or false.
 
     The filter function is called once on all records for the type when
     it is created, and then once on each newly loaded or created record.

@@ -20,12 +20,18 @@ var get = Ember.get;
 
 export default Ember.ArrayProxy.extend(Ember.Evented, {
   /**
+    Used to filter records asynchronously
+  */
+  lastFilterPromises: {},
+
+  /**
     The model type contained by this record array.
 
     @property type
     @type DS.Model
   */
   type: null,
+
 
   /**
     The array of client ids backing the record array. When a
